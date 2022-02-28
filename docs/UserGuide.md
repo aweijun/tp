@@ -3,7 +3,10 @@ layout: page
 title: User Guide
 ---
 
-AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized for use via a Command Line Interface** (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps.
+Trackermon is a **desktop app** for **tracking and managing shows**, **optimized for use via a
+Command Line Interface (CLI)** while still having the **benefits of a Graphical User Interface (GUI)**.
+The app allows the user to track and remember what shows they have watched or currently watching. 
+They can easily look up the list of shows if they need to.
 
 * Table of Contents
 {:toc}
@@ -12,19 +15,20 @@ AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized fo
 
 ## Quick start
 
-1. Ensure you have Java `11` or above installed in your Computer.
+1. Ensure you have `Java 11` or above installed in your Computer.
 
-1. Download the latest `addressbook.jar` from [here](https://github.com/se-edu/addressbook-level3/releases).
+2. Download the latest version of **Trackermon** [here](https://github.com/AY2122S2-CS2103T-T09-3/tp/releases).
 
-1. Copy the file to the folder you want to use as the _home folder_ for your AddressBook.
+3. Move the file to the folder you want to use as the _home folder_ for **Trackermon**.
 
-1. Double-click the file to start the app. The GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
-   ![Ui](images/Ui.png)
+4. Double-click the file to start the app.
 
-1. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
-   Some example commands you can try:
+5. Start communicating with Trackermon using the command box.
 
-   * **`list`** : Lists all contacts.
+
+Some example commands you can try:
+
+   * **`list`** : Lists all shows.
 
    * **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to the Address Book.
 
@@ -34,7 +38,6 @@ AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized fo
 
    * **`exit`** : Exits the app.
 
-1. Refer to the [Features](#features) below for details of each command.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -73,23 +76,24 @@ Shows a message explaning how to access the help page.
 Format: `help`
 
 
-### Adding a person: `add`
+### Adding a show: `add`
 
-Adds a person to the address book.
+Adds a new show to trackermon. Note that the name of the show can only contain alphanumeric characters.
 
-Format: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​`
+Format: `add n/<NAME> [s/<STATUS>] [t/<TAG>]…​`
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 A person can have any number of tags (including 0)
 </div>
 
 Examples:
-* `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`
-* `add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal`
+* `add n/All of us are dead t/Kdrama`
+* `add n/All of us are dead s/completed t/Kdrama`
+* `add n/All of us are dead`
 
-### Listing all persons : `list`
+### Listing all shows : `list`
 
-Shows a list of all persons in the address book.
+Shows a list of all shows in Trackermon.
 
 Format: `list`
 
@@ -174,8 +178,7 @@ _Details coming soon ..._
 
 ## FAQ
 
-**Q**: How do I transfer my data to another Computer?<br>
-**A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous AddressBook home folder.
+_Details coming soon ..._
 
 --------------------------------------------------------------------------------------------------------------------
 
