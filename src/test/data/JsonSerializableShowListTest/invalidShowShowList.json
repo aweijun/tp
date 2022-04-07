@@ -1,0 +1,9 @@
+{
+  "shows": [ {
+    "name": "Valid Show",
+    "status": "WATCHING",
+    "tagged": [ "Valid Tag" ],
+    "comment": "Valid Comment",
+    "rating": "3"
+  } ]
+}

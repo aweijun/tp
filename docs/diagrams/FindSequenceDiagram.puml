@@ -1,0 +1,64 @@
+@startuml
+!include style.puml
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":TrackermonParser" as TrackermonParser LOGIC_COLOR
+participant ":FindCommandParser" as FindCommandParser LOGIC_COLOR
+participant "fc:FindCommand" as FindCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("find t/Anime")
+activate LogicManager
+
+LogicManager -> TrackermonParser : parseCommand("find t/Anime")
+activate TrackermonParser
+
+create FindCommandParser
+TrackermonParser -> FindCommandParser
+activate FindCommandParser
+
+FindCommandParser --> TrackermonParser
+deactivate FindCommandParser
+
+TrackermonParser -> FindCommandParser :parse("t/Anime")
+activate FindCommandParser
+
+ref over FindCommandParser, FindCommand : Parsing implementation
+
+FindCommandParser --> TrackermonParser : fc
+deactivate FindCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+FindCommandParser -[hidden]-> TrackermonParser
+destroy FindCommandParser
+
+TrackermonParser --> LogicManager : fc
+deactivate TrackermonParser
+
+LogicManager -> FindCommand : execute(model)
+activate FindCommand
+
+FindCommand -> Model : updateFilteredShowList(predicates)
+activate Model
+
+Model --> FindCommand
+deactivate Model
+
+create CommandResult
+FindCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> FindCommand
+deactivate CommandResult
+
+FindCommand --> LogicManager : result
+deactivate FindCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

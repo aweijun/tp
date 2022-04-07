@@ -7,5 +7,5 @@
       "y" : 100
     }
   },
-  "addressBookFilePath" : "addressbook.json"
+  "showListFilePath" : "trackermon.json"
 }

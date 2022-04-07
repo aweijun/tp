@@ -1,0 +1,31 @@
+@startuml
+!include style.puml
+
+mainframe **sd** Parsing implementation
+box Logic LOGIC_COLOR_T1
+participant ":FindCommandParser" as FindCommandParser LOGIC_COLOR
+participant ":ArgumentTokenizer" as ArgumentTokenizer LOGIC_COLOR
+participant ":TagsContainsKeywordsPredicate" as TagsContainsKeywordsPredicate LOGIC_COLOR
+participant "fc:FindCommand" as FindCommand LOGIC_COLOR
+
+FindCommandParser -> ArgumentTokenizer : tokenize(args, PREFIX_TAG)
+activate ArgumentTokenizer
+
+ArgumentTokenizer --> FindCommandParser : argumentMultimap
+deactivate ArgumentTokenizer
+
+create TagsContainsKeywordsPredicate
+FindCommandParser -> TagsContainsKeywordsPredicate : TagsContainsKeywordsPredicate(predicates)
+activate TagsContainsKeywordsPredicate
+
+TagsContainsKeywordsPredicate --> FindCommandParser : predicates
+deactivate TagsContainsKeywordsPredicate
+
+create FindCommand
+FindCommandParser -> FindCommand : FindCommand(predicates)
+activate FindCommand
+
+FindCommand --> FindCommandParser : fc
+deactivate FindCommand
+
+@enduml

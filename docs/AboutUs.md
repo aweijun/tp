@@ -5,8 +5,6 @@ title: About Us
 
 We are a team based in the [School of Computing, National University of Singapore](http://www.comp.nus.edu.sg).
 
-You can reach us at the email `seer[at]comp.nus.edu.sg`
-
 ## Project team
 
 ### Jonathan Yeo
@@ -27,9 +25,9 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [<img src="images/github-icon.png" width="50px">](https://github.com/aweijun) &nbsp; &nbsp; &nbsp;
 [<img src="images/portfolio-icon.png" width="50px">](team/aweijun.md)
 
-|   Role    | Responsibilities |
-|:---------:|:-----------------|
-| Developer | Integration      |
+|   Role    | Responsibilities        |
+|:---------:|:------------------------|
+| Developer | Integration <br/> Model |
 
 ### Low Kaiwei
 
@@ -38,9 +36,9 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [<img src="images/github-icon.png" width="50px">](http://github.com/lowkaiwei98) &nbsp; &nbsp; &nbsp;
 [<img src="images/portfolio-icon.png" width="50px">](team/lowkaiwei98.md)
 
-|   Role    | Responsibilities |
-|:---------:|:-----------------|
-| Developer | Code Quality     |
+|   Role    | Responsibilities         |
+|:---------:|:-------------------------|
+| Developer | Code Quality <br/> Logic |
 
 ### Lim Shao Cong
 
@@ -49,9 +47,9 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [<img src="images/github-icon.png" width="50px">](http://github.com/arcornior) &nbsp; &nbsp; &nbsp;
 [<img src="images/portfolio-icon.png" width="50px">](team/arcornior.md)
 
-|   Role    | Responsibilities |
-|:---------:|:-----------------|
-| Developer | Documentation    |
+|   Role    | Responsibilities            |
+|:---------:|:----------------------------|
+| Developer | Documentation <br/> Storage |
 
 ### Zachary Chan
 
@@ -60,6 +58,6 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [<img src="images/github-icon.png" width="50px">](https://github.com/Ardentsoul) &nbsp; &nbsp; &nbsp;
 [<img src="images/portfolio-icon.png" width="50px">](team/ardentsoul.md)
 
-|   Role    | Responsibilities               |
-|:---------:|:-------------------------------|
-| Developer | Quality Assurance              |
+|   Role    | Responsibilities                |
+|:---------:|:--------------------------------|
+| Developer | Quality Assurance <br/> Command |

@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:User enters find command;
+:Parse command arguments;
+
+if () then ([else])
+    :Creates general show predicate;
+else ([hasPrefix])
+    :Creates predicate based on that prefix;
+
+endif
+    :Find command;
+    :Update show list;
+stop
+
+@enduml

@@ -1,0 +1,16 @@
+{
+  "shows": [ {
+    "name": "Valid Show",
+    "status": "WATCHING",
+    "tagged": [ "ValidTag" ],
+    "comment": "Valid Comment",
+    "rating": "3"
+  }, {
+    "name": "Valid Show",
+    "status": "WATCHING",
+    "tagged": [ "ValidTag" ],
+    "comment": "Valid Comment",
+    "rating": "3"
+  } ]
+}
+

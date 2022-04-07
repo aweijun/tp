@@ -5,9 +5,7 @@ title: Lim Shao Cong's Project Portfolio Page
 
 ### Project: Trackermon
 
-Trackermon is an app that helps the user to track and remember what shows they have watched or currently
-watching. They can easily look up the list of shows if they need to.
-
+Trackermon is a desktop application for tracking and managing shows, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). Trackermon helps people track and remember what shows they have watched, are currently watching, or plan to watch.
 Given below are my contributions to the project.
 
 * **New Feature**: _TBA_

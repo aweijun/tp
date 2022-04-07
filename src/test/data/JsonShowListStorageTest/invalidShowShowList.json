@@ -1,0 +1,10 @@
+{
+  "shows": [ {
+    "name": "Show with invalid name field: !nV@l!D Sh0w",
+    "status": "WATCHING",
+    "tagged": [ "ValidTag" ],
+    "comment": "Valid Comment",
+    "rating": "3"
+  } ]
+}
+

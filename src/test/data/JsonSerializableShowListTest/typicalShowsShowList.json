@@ -1,0 +1,35 @@
+{
+  "_comment": "Trackermon save file which contains the same Show values as in TypicalShows#getTypicalShowList()",
+  "shows" : [
+    {
+      "name": "Alice in WonderLand",
+      "status": "COMPLETED",
+      "tagged": [ "movie" ],
+      "comment": "bad",
+      "rating": "5"
+    }, {
+      "name": "gone",
+      "status": "WATCHING",
+      "tagged": [ ],
+      "comment": "bad",
+      "rating": "0"
+    }, {
+      "name": "friends",
+      "status": "WATCHING",
+      "tagged": [ "Horror", "friends" ],
+      "comment": "good",
+      "rating": "0"
+    }, {
+      "name": "HIMYM",
+      "status": "WATCHING",
+      "tagged": [ "Horror", "friends" ],
+      "comment": "good",
+      "rating": "0"
+    }, {
+      "name": "Hancock",
+      "status": "WATCHING",
+      "tagged": [ "movie", "series" ],
+      "comment": "good",
+      "rating": "0"
+    } ]
+}

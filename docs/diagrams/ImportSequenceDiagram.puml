@@ -1,0 +1,57 @@
+@startuml
+!include style.puml
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":TrackermonParser" as TrackermonParser LOGIC_COLOR
+participant ":ImportCommand" as ImportCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+
+box Storage STORAGE_COLOR_T1
+participant "jfm:JsonFileManager" as JsonFileManager STORAGE_COLOR
+box
+
+-> LogicManager : execute("import")
+activate LogicManager
+
+LogicManager -> TrackermonParser : parseCommand("import")
+activate TrackermonParser
+
+create ImportCommand
+TrackermonParser -> ImportCommand :
+activate ImportCommand
+
+ImportCommand --> TrackermonParser
+deactivate ImportCommand
+deactivate TrackermonParser
+
+LogicManager -> ImportCommand : execute(model)
+activate ImportCommand
+
+create JsonFileManager
+ImportCommand -> JsonFileManager :
+activate JsonFileManager
+
+JsonFileManager --> ImportCommand :
+deactivate JsonFileManager
+
+ImportCommand -> JsonFileManager : importFile(model.getShowListFilePath)
+activate JsonFileManager
+
+JsonFileManager --> ImportCommand : result
+deactivate JsonFileManager
+
+create CommandResult
+ImportCommand -> CommandResult :
+activate CommandResult
+
+CommandResult --> ImportCommand
+deactivate CommandResult
+
+ImportCommand --> LogicManager : result
+deactivate ImportCommand
+
+<-- LogicManager
+deactivate LogicManager
+
+@enduml
